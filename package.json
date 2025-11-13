@@ -44,10 +44,14 @@
     "copyright": "CryMark",
     "afterPack": "./afterPack.cjs",
     "files": [
-      "**/*"
+      "**/*",
+      "!**/.vscode/**",
+      "!**/.git/**",
+      "!**/electron-build/**",
+      "!electron-build/**"
     ],
     "asarUnpack": [
-      "icon64.ico"
+      "icon.ico"
     ],
     "directories": {
       "output": "electron-build"
@@ -60,16 +64,16 @@
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
       "include": "installer.nsh",
-      "installerIcon": "./icon256.ico",
-      "uninstallerIcon": "./icon256.ico",
-      "installerHeaderIcon": "./icon256.ico",
+      "installerIcon": "./icon.ico",
+      "uninstallerIcon": "./icon.ico",
+      "installerHeaderIcon": "./icon.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "electron_demo",
       "language": "2052"
     },
     "win": {
-      "icon": "./icon256.ico",
+      "icon": "./icon.ico",
       "target": [
         {
           "target": "nsis",
